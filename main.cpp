@@ -30,9 +30,9 @@ int main() {
     screen2.Draw2(tetraedrs);
     end_time = clock();
     unsigned int search_time2 = end_time - start_time;
-    std::cout<<search_time<<" : "<<search_time2;
+    std::cout<<search_time<<" : "<<search_time2<<std::endl;
     screen.img->save_bmp("Pikcha.bmp");
-    screen.img->display();
+    screen2.img->display();
     for (int i=0; i<tetraedrs.size();i++){
         delete tetraedrs[i];
     }
