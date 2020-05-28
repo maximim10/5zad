@@ -24,8 +24,20 @@ public:
         std::getline(inputFile_main, tmpString);
         std::stringstream strStream;
         strStream << tmpString;
-        strStream >> xyz[0]>>xyz[1]>>xyz[2] >> norm[0]>>norm[1]>>norm[2] >> up[0]>>up[1]>>up[2]>>
-                     dist >> lim >> alpha >> w>>h;
+        strStream >> xyz[0]>>xyz[1]>>xyz[2];
+        std::cout << "1= "<<xyz[0]<<" "<<xyz[1]<<" "<<xyz[2]<<std::endl; std::getline(inputFile_main, tmpString);
+        strStream << tmpString;
+        strStream >> norm[0]>>norm[1]>>norm[2];
+        std::cout << "2= "<<norm[0]<<" "<<norm[1]<<" "<<norm[2]<<std::endl; std::getline(inputFile_main, tmpString);
+        strStream << tmpString;
+        strStream >> up[0]>>up[1]>>up[2];
+        std::cout << "3= "<<up[0]<<" "<<up[1]<<" "<<up[2]<<std::endl; std::getline(inputFile_main, tmpString);
+        strStream << tmpString;
+        strStream >> dist >> lim >> alpha;
+        std::cout << "4= "<<dist<<" "<<lim<<" "<<alpha<<std::endl; std::getline(inputFile_main, tmpString);
+        strStream << tmpString;
+        strStream >> w>>h;
+        std::cout << "w,h= "<<w<<" "<<h;
         double leng=std::sqrt(norm[0]*norm[0]+norm[1]*norm[1]+norm[2]*norm[2]);
         norm[0]=norm[0]/leng; norm[1]=norm[1]/leng; norm[2]=norm[2]/leng;
         leng=std::sqrt(up[0]*up[0]+up[1]*up[1]+up[2]*up[2]);

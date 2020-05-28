@@ -5,7 +5,7 @@
     dest[0] = v1[0]-v2[0]; \
     dest[1] = v1[1]-v2[1]; \
     dest[2] = v1[2]-v2[2];
-int intersect_triangle(int orig[3], double dir[3], int vert0[3], int vert1[3], int vert2[3]){
+double intersect_triangle(int orig[3], double dir[3], int vert0[3], int vert1[3], int vert2[3]){
     double edge1[3], edge2[3], tvec[3], pvec[3], qvec[3];
     double det;
     double t,u,v;
